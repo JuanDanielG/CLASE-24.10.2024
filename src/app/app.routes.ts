@@ -20,7 +20,8 @@ export const routes: Routes = [
         children :[
             {
                 path: 'producto', // ruta administrador producto
-                loadComponent: ()=> import ("./administrador/productos/pages/productos/productos.component").then( m => m.ProductosComponent)  // cuando ingrese importeme la siguiente ruta
+                loadChildren: ()=> import ("./administrador/productos/producto.routes").then(r => r.routesProducto)
+                //loadComponent: ()=> import ("./administrador/productos/pages/productos/productos.component").then( m => m.ProductosComponent)  // cuando ingrese importeme la siguiente ruta
             },
             {
                 path: "usuario",  //ruta administrador usuario
