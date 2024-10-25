@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ProductosComponent } from './administrador/productos/pages/productos/productos.component';
 
 import { ErrorComponent } from './publico/pages/error/error.component';
+import { OtroComponent } from './administrador/usuarios/pages/otro/otro.component';
 
 export const routes: Routes = [
     {
@@ -25,7 +26,13 @@ export const routes: Routes = [
             },
             {
                 path: "usuario",  //ruta administrador usuario
-                loadComponent: () => import ("./administrador/usuarios/pages/usuario/usuario.component")
+                loadComponent: () => import ("./administrador/usuarios/pages/usuario/usuario.component"),
+                children: [
+                    {
+                        path: 'otro',
+                        component: OtroComponent
+                    }
+                ]
             },
         ] 
     },
