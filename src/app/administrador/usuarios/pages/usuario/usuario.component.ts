@@ -15,10 +15,11 @@ export default class UsuarioComponent {
   login () {
     this.auth.getAuth().subscribe(res=>{
       console.log(res.token);
+      localStorage.setItem("api/token", res.token);
     })
   }
 
   unlogin () {
-    
+    localStorage.removeItem("api/token");
   }
 }
