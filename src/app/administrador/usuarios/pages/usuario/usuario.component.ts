@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AuthService } from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-usuario',
@@ -9,5 +10,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './usuario.component.css'
 })
 export default class UsuarioComponent {
+  private auth = inject(AuthService)
 
+  login () {
+    this.auth.getAuth().subscribe(res=>{
+      console.log(res.token);
+    })
+  }
+
+  unlogin () {
+    
+  }
 }
