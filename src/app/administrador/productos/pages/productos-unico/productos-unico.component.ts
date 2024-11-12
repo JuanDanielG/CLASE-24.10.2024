@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './productos-unico.component.css'
 })
 export class ProductosUnicoComponent {
-  idProducto = input.required<number>({alias: 'id'}) //
+  idProducto = input.required<number>({alias: 'id'})
   public route = inject(ActivatedRoute);
   idProductoAntiguo = '';
 

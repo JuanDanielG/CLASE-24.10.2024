@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { environment } from '../environment/environment';
 
 interface token {
-  token : string
+  token: string;
 }
 
 @Injectable({
@@ -10,15 +12,23 @@ interface token {
 })
 export class AuthService {
 
-  private readonly http = inject(HttpClient);
+  private apiUrl = `${environment.api}/auth/login`;
+  protected readonly localStorage = localStorage;
+  constructor(private _http: HttpClient) { }
+  private _url = environment.api;
 
-  constructor() { }
+  getToken(username: string, password: string):Observable<any> {
+    return this._http.post(`${this._url}/auth/login`, {
+      email: username,
+      password: password
+    })
+  }
 
-getAuth(){
-  return this.http.post<token>("https://reqres.in/api/login", {
-      "email": "eve.holt@reqres.in",
-      "password": "cityslicka"
-  })
-}
-
+  getUserName(): string {
+    const username = localStorage.getItem('name_user');
+    if (username) {
+      return username.split('@')[0];
+    }
+    return 'Usuario';
+  }
 }
