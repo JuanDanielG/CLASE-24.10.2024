@@ -92,7 +92,7 @@ export class ProductosEditComponent implements OnInit {
               icon: 'success',
               confirmButtonText: 'OK'
             }).then(() => {
-              this.router.navigate(['/producto']);
+              this.router.navigate(['administrador/producto']);
             });
           },
           (error) => {
