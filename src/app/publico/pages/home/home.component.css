@@ -7,6 +7,7 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
 .carousel-caption {
   bottom: 270px;
 }
@@ -34,7 +35,10 @@
   letter-spacing: 2px;
 }
 
-.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
   color: #fff;
 }
 
@@ -54,7 +58,8 @@
   padding: .2rem 1rem;
 }
 
-.nav-link.active,.nav-link:focus{
+.nav-link.active,
+.nav-link:focus {
   color: #fff;
 }
 
@@ -64,24 +69,25 @@
   line-height: 0.3;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
   color: #fff;
 }
 
-.link-area
-{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  padding:10px;
-  border-radius:40px;
+.link-area {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 11px;
+  border-radius: 45px;
   background: #7a0505b6;
 }
-.link-area a
-{
-  text-decoration:none;
-  color:#fff;
-  font-size:25px;
+
+.link-area a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font: bolder;
 }
 
 /* Css del footer */
@@ -101,7 +107,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color:tomato;
+  color: tomato;
   cursor: default;
 }
 
@@ -112,8 +118,10 @@ footer {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Espacio entre los íconos */
-  margin-top: 5px; /* Espacio entre el texto de contacto y los íconos */
+  gap: 20px;
+  /* Espacio entre los íconos */
+  margin-top: 5px;
+  /* Espacio entre el texto de contacto y los íconos */
 }
 
 .social-links a {
@@ -121,12 +129,14 @@ footer {
 }
 
 .social-links img {
-  width: 24px; /* Ajusta el tamaño del ícono */
-  height: 24px; /* Ajusta el tamaño del ícono */
+  width: 24px;
+  /* Ajusta el tamaño del ícono */
+  height: 24px;
+  /* Ajusta el tamaño del ícono */
   transition: transform 0.3s;
 }
 
 .social-links img:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  transform: scale(1.1);
+  /* Aumenta ligeramente el tamaño al pasar el cursor */
 }
-
