@@ -1,17 +1,15 @@
 import {Component, OnInit, inject} from '@angular/core';
 import {ProductoService} from '../../../../services/producto.service';
 import {ProductoInterface} from '../../../../interfaces/producto-interface';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {ActivatedRoute, Router, RouterLink, RouterModule, RouterOutlet} from '@angular/router';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-productos',
   standalone: true,
   imports: [
-    NgOptimizedImage,
-    RouterOutlet,
     RouterLink, CommonModule,
     RouterModule,
     ReactiveFormsModule

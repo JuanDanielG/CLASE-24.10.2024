@@ -9,7 +9,6 @@ import { ProductoService } from '../../../../services/producto.service';
   selector: 'app-productos-add',
   standalone: true,
   imports: [
-    RouterOutlet,
     RouterLink,
     CommonModule,
     RouterModule,

@@ -417,3 +417,64 @@ button[mat-raised-button].warn:hover {
 .product-item p {
   margin: 10px 0;
 }
+
+
+/* Flechas para el carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y semi-transparente */
+  border-radius: 50%; /* Flechas redondas */
+  width: 40px; /* Tamaño más adecuado */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para hacerlas resaltar */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Flechas con icono */
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  font-family: "Font Awesome 5 Free"; /* Aseguramos que utilices iconos de FontAwesome */
+  font-weight: 900; /* Hace que los iconos sean más gruesos */
+  color: white; /* Color blanco para las flechas */
+  content: ''; 
+}
+
+.carousel-control-prev-icon::before {
+  content: '‹'; /* Ícono de flecha izquierda */
+}
+
+.carousel-control-next-icon::before {
+  content: '›'; /* Ícono de flecha derecha */
+}
+
+/* Efecto de hover para las flechas */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro al pasar el ratón */
+  transform: scale(1.2); /* Aumenta el tamaño de la flecha cuando pasa el ratón */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra más fuerte en hover */
+}
+
+/* Posicionamiento de las flechas */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px; /* Botones más grandes */
+  height: 50px; /* Botones más grandes */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%; /* Botones redondeados */
+  background: transparent; /* Fondo transparente */
+}
+
+/* Flecha izquierda (prev) */
+.carousel-control-prev {
+  left: 20px; /* Mueve la flecha izquierda un poco más hacia la izquierda */
+}
+
+/* Flecha derecha (next) */
+.carousel-control-next {
+  right: 20px; /* Mueve la flecha derecha un poco más hacia la derecha */
+}
