@@ -1,14 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { AuthService } from '../../../../services/auth.service';
 import Swal from 'sweetalert2';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink} from '@angular/router';
 import {ReactiveFormsModule, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { AppComponent } from '../../../../app.component';
 
 
 @Component({
   selector: 'app-usuario',
-  imports: [RouterOutlet, AppComponent, RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule],
   standalone: true,
   templateUrl: './usuario.component.html',
   styleUrls: ['./usuario.component.scss']
