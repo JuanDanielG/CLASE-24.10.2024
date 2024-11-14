@@ -10,4 +10,4 @@ _Repositorio de entrega del segundo parcial de Arquitectura orientada a servicio
 ## Construido con:
 
 - Angular Cli 17 - El framework web usado.
-- Api Externa - Postman.
+- Api Externa - Fake API Platzi
