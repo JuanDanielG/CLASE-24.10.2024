@@ -20,13 +20,4 @@ export const authGuard: CanActivateFn = (route, state) => { //PARA PROTEGER LAS 
     router.navigateByUrl('administrador/producto').then();
     return of(false);
   }
-
-
-  if(a === null){
-    router.navigateByUrl("inicio");
-
-
-  }
-
-  return (a!= null);
 };
